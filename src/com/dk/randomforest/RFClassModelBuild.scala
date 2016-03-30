@@ -1,6 +1,6 @@
 package com.dk.randomforest
 
-import com.dakuai.util.DKUtil
+import com.dk.util.DKUtil
 import org.apache.spark.mllib.evaluation.{MulticlassMetrics, BinaryClassificationMetrics}
 import org.apache.spark.mllib.regression.LabeledPoint
 import org.apache.spark.mllib.tree.RandomForest

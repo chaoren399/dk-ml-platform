@@ -1,6 +1,6 @@
 package com.dk.nb
 
-import com.dakuai.util.DKUtil
+import com.dk.util.DKUtil
 import org.apache.spark.mllib.classification.NaiveBayes
 import org.apache.spark.mllib.evaluation.MulticlassMetrics
 import org.apache.spark.mllib.regression.LabeledPoint

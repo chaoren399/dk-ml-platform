@@ -1,6 +1,6 @@
 package com.dk.svm
 
-import com.dakuai.util.DKUtil
+import com.dk.util.DKUtil
 import org.apache.spark.mllib.classification.{SVMModel, LogisticRegressionModel}
 import org.apache.spark.{SparkContext, SparkConf}
 

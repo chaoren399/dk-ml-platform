@@ -1,6 +1,6 @@
 package com.dk.lr
 
-import com.dakuai.util.DKUtil
+import com.dk.util.DKUtil
 import org.apache.spark.mllib.classification.LogisticRegressionWithLBFGS
 import org.apache.spark.mllib.evaluation.{BinaryClassificationMetrics, MulticlassMetrics}
 import org.apache.spark.mllib.linalg.Vectors

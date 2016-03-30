@@ -1,7 +1,7 @@
 package com.dk.gaussian
 
-import com.dakuai.util.DKUtil
-import com.dakuai.util.MM.{Gau, Data}
+import com.dk.util.DKUtil
+import com.dk.util.MM.{Gau, Data}
 import org.apache.hadoop.fs.Path
 import org.apache.spark.mllib.clustering.GaussianMixture
 import org.apache.spark.mllib.linalg.DenseMatrix

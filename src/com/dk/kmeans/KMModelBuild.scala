@@ -1,7 +1,7 @@
 package com.dk.kmeans
 
-import com.dakuai.util.DKUtil
-import com.dakuai.util.MM.Cluster
+import com.dk.util.DKUtil
+import com.dk.util.MM.Cluster
 import org.apache.hadoop.fs.Path
 import org.apache.spark.mllib.clustering.KMeans
 import org.apache.spark.sql.SQLContext

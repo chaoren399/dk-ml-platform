@@ -1,6 +1,6 @@
 package com.dk.randomforest
 
-import com.dakuai.util.DKUtil
+import com.dk.util.DKUtil
 import org.apache.spark.mllib.classification.LogisticRegressionModel
 import org.apache.spark.mllib.linalg.{Vector, Vectors}
 import org.apache.spark.mllib.tree.model.RandomForestModel

@@ -1,6 +1,6 @@
 package com.dk.gaussian
 
-import com.dakuai.util.DKUtil
+import com.dk.util.DKUtil
 import org.apache.hadoop.fs.Path
 import org.apache.spark.mllib.clustering.GaussianMixtureModel
 import org.apache.spark.mllib.linalg.{Matrices, Matrix, Vector}

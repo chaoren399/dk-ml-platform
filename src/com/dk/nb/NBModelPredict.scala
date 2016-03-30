@@ -1,6 +1,6 @@
 package com.dk.nb
 
-import com.dakuai.util.DKUtil
+import com.dk.util.DKUtil
 import org.apache.spark.mllib.classification. NaiveBayesModel
 import org.apache.spark.{SparkContext, SparkConf}
 
