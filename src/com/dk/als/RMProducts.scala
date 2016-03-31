@@ -37,8 +37,8 @@ object RMProducts {
         var key = 0
         // 拼接推荐结果
         rs.foreach(r => {
-          key = r.product
-          value = value + r.user + ":" + r.rating + ","
+          key = r.user
+          value = value + r.product + ":" + r.rating + ","
         })
         println("用户--推荐的商品：分值, ······")
         println(key+"--"+value)
