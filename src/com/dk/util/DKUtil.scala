@@ -49,7 +49,7 @@ object DKUtil {
       data = MLUtils.loadLibSVMFile(sc, inputPath)
     }
     else if (dataType == "LabeledPoints") {
-      val text = sc.textFile(inputPath)
+      val text = sc.textFile(inputPath).map(_.trim).filter(line => !(line.isEmpty || line.startsWith("#")))
       data = text.map { line =>
         val parts = line.split(",")
         LabeledPoint(parts(0).toDouble, Vectors.dense(parts.tail.map(java.lang.Double.parseDouble)))
@@ -91,7 +91,8 @@ object DKUtil {
 
 
     else if (dataType == "LabeledPoints") {
-      val text = sc.textFile(inputPath)
+      val text = sc.textFile(inputPath).map(_.trim)
+        .filter(line => !(line.isEmpty || line.startsWith("#")))
       data = text.map { line =>
         val parts = line.split(",")
         Vectors.dense(parts.map(java.lang.Double.parseDouble))
@@ -128,7 +129,8 @@ object DKUtil {
 
 
     else if (dataType == "LabeledPoints") {
-      val text = sc.textFile(inputPath)
+      val text = sc.textFile(inputPath).map(_.trim)
+        .filter(line => !(line.isEmpty || line.startsWith("#")))
       data = text.map { line =>
         val parts = line.split(",")
         Vectors.dense(parts.map(java.lang.Double.parseDouble))

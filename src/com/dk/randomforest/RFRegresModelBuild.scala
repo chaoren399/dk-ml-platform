@@ -26,9 +26,9 @@ object RFRegresModelBuild {
 
     val sc = new SparkContext(conf)
 
-    val data = DKUtil.forBuildData(sc, dataType, inputPath)
+    val data = DKUtil.forBuildData(sc, dataType, inputPath).cache()
 
-    val splits = data.randomSplit(Array(0.7, 0.3))
+    val splits = data.randomSplit(Array(0.8, 0.2))
     val (trainingData, testData) = (splits(0), splits(1))
 
     //回归

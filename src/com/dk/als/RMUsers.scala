@@ -26,7 +26,8 @@ object RMUsers {
     val sc = new SparkContext(conf)
     val model = MatrixFactorizationModel.load(sc, modelPath)
 
-    val data = sc.textFile(inputPath).distinct().collect()
+    val data = sc.textFile(inputPath).distinct().map(_.trim)
+      .filter(line => !(line.isEmpty || line.startsWith("#"))).collect()
 
     val rawData = new mutable.HashMap[String, String]()
     data.foreach(

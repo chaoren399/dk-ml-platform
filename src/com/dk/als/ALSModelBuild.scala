@@ -24,7 +24,8 @@ object ALSModelBuild {
 
     val sc = new SparkContext(conf)
 
-    val data = sc.textFile(inputPath)
+    val data = sc.textFile(inputPath).map(_.trim)
+      .filter(line => !(line.isEmpty || line.startsWith("#")))
     val ratings = data.map(_.split(',') match { case Array(user, item, rate) =>
       Rating(user.toInt, item.toInt, rate.toDouble)
     })

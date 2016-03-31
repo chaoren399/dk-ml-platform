@@ -22,7 +22,8 @@ object FPGrowthModel {
 
     val sc = new SparkContext(conf)
 
-    val data = sc.textFile(inputPath).map(_.split(" ")).cache()
+    val data = sc.textFile(inputPath).map(_.trim)
+      .filter(line => !(line.isEmpty || line.startsWith("#"))).map(_.split(",")).cache()
 
     val model = new FPGrowth().setMinSupport(minSupport).run(data)
 
