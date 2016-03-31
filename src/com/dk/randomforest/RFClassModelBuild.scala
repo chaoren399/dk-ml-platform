@@ -28,15 +28,15 @@ object RFClassModelBuild {
 
     val data = DKUtil.forBuildData(sc, dataType, inputPath)
 
-    val splits = data.randomSplit(Array(0.7, 0.3))
+    val splits = data.randomSplit(Array(0.8, 0.2))
     val (trainingData, testData) = (splits(0), splits(1))
 
     //分类
     val categoricalFeaturesInfo = Map[Int, Int]()
-    val numTrees = 10 // Use more in practice.
+    val numTrees = 17 // Use more in practice.
     val featureSubsetStrategy = "auto" // Let the algorithm choose.
     val impurity = "gini"
-    val maxDepth = 6
+    val maxDepth = 8
     val maxBins = 100
 
     val model = RandomForest.trainClassifier(trainingData, numClasses, categoricalFeaturesInfo,
